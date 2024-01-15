@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-0_5zeu0$d50*sij794wu^c3)ui)83%0z7q9akha(y6)afjg7j@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-brianach-fmcistore-bulo6nwqikt.ws-eu107.gitpod.io',
+ALLOWED_HOSTS = ['8000-brianach-fmcistore-as13qaxm2bk.ws-eu107.gitpod.io',
                  'fmcistore-366e47ff9414.herokuapp.com', 'localhost']
 
 # Application definition
