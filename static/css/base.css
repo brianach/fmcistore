@@ -159,6 +159,10 @@ body {
     background-color: #7fd2ef;
 }
 
+.my-btn {
+    border-color: #457893;
+}
+
 .btt-button {
     height: 42px;
     width: 42px;
