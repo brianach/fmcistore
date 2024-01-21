@@ -119,3 +119,11 @@ def edit_storeitem(request, storeitem_id):
     }
 
     return render(request, template, context)
+
+
+def delete_storeitem(request, storeitem_id):
+    """ Delete a storeitem from the store """
+    storeitem = get_object_or_404(StoreItem, pk=storeitem_id)
+    storeitem.delete()
+    messages.success(request, 'Storeitem deleted!')
+    return redirect(reverse('store'))
