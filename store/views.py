@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -76,7 +77,12 @@ def storeitem_detail(request, storeitem_id):
     return render(request, 'store/storeitem_detail.html', context)
 
 
+@login_required
 def add_storeitem(request):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     """ Add a storeitem to the store """
     if request.method == 'POST':
         form = StoreItemForm(request.POST, request.FILES)
@@ -97,7 +103,12 @@ def add_storeitem(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_storeitem(request, storeitem_id):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     """ Edit a storeitem in the store """
     storeitem = get_object_or_404(StoreItem, pk=storeitem_id)
     if request.method == 'POST':
@@ -121,7 +132,12 @@ def edit_storeitem(request, storeitem_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_storeitem(request, storeitem_id):
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     """ Delete a storeitem from the store """
     storeitem = get_object_or_404(StoreItem, pk=storeitem_id)
     storeitem.delete()
