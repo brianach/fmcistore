@@ -95,3 +95,27 @@ def add_storeitem(request):
     }
 
     return render(request, template, context)
+
+
+def edit_storeitem(request, storeitem_id):
+    """ Edit a storeitem in the store """
+    storeitem = get_object_or_404(StoreItem, pk=storeitem_id)
+    if request.method == 'POST':
+        form = StoreItemForm(request.POST, request.FILES, instance=storeitem)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated storeitem!')
+            return redirect(reverse('storeitem_detail', args=[storeitem.id]))
+        else:
+            messages.error(request, 'Failed to update storeitem. Please ensure the form is valid.')
+    else:
+        form = StoreItemForm(instance=storeitem)
+        messages.info(request, f'You are editing {storeitem.name}')
+
+    template = 'store/edit_storeitem.html'
+    context = {
+        'form': form,
+        'storeitem': storeitem,
+    }
+
+    return render(request, template, context)

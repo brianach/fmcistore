@@ -20,19 +20,19 @@
             <div class="col-12 col-md-6">
                 <hr>
                 <h2 class="text-white mb-4">StoreItem Management</h2>
-                <h5 class="text-my-color">Add a storeitem</h5>
+                <h5 class="text-my-color">Edit a storeitem</h5>
                 <hr>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-md-6 text-my-color">
-                <form method="POST" action="{% url 'add_storeitem' %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_storeitem' storeitem.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
                         <a class="btn btn-outline-my-color rounded-0 text-my-color" href="{% url 'store' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add storeitem</button>
+                        <button class="btn btn-black rounded-0" type="submit">Update storeitem</button>
                     </div>
                 </form>
             </div>            
