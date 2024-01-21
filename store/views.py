@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import StoreItem, Category
-
+from .forms import StoreItemForm
 # Create your views here.
 
 
@@ -75,3 +75,23 @@ def storeitem_detail(request, storeitem_id):
 
     return render(request, 'store/storeitem_detail.html', context)
 
+
+def add_storeitem(request):
+    """ Add a storeitem to the store """
+    if request.method == 'POST':
+        form = StoreItemForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added storeitem!')
+            return redirect(reverse('add_storeitem'))
+        else:
+            messages.error(request, 'Failed to add storeitem. Please ensure the form is valid.')
+    else:
+        form = StoreItemForm()
+        
+    template = 'store/add_storeitem.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

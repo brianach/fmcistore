@@ -42,8 +42,11 @@
                             {% for item in cart_items %}
                                 <tr class="text-black">
                                     <td class="p-3 w-25">
-                                        <img class="card-img-top cart-image-container img-fluid" src="{{ item.storeitem.image_one.url }}"
-                                            alt="{{ item.storeitem.name }}">
+                                        {% if item.storeitem.image_one %}
+                                        <img class="img-fluid rounded" src="{{ item.storeitem.image_one.url }}" alt="{{ item.storeitem.name }}">
+                                        {% else %}
+                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.storeitem.name }}">
+                                        {% endif %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.storeitem.name }}</strong></p>
