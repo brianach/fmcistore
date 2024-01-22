@@ -11,7 +11,25 @@
     {% endif %}<br>
     {{ widget.input_text }}
 {% endif %}
-<span class="btn btn-black rounded-0 btn-file">
+<span class="btn btn-black rounded-0 btn-file btn-width">
     Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </span>
-<strong><p class="text-danger" id="filename"></p></strong>
+<strong><p class="text-danger" id="filename"></p></strong><hr>
+
+<!-- If there is no second image this script will remove the add image input -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Check if the second image field exists
+        var imageTwo = document.getElementById("id_image_two");
+        
+        if (imageTwo) {
+            if (!imageTwo.value) {
+                // If not needed, remove it
+                var inpImageTwo = document.getElementById("id_image_two");
+                if (inpImageTwo) {
+                    inpImageTwo.parentNode.removeChild(inpImageTwo);
+                }
+            }
+        }
+    });
+</script>
