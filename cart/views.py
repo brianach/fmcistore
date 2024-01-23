@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
 
+from store.models import StoreItem
 # Create your views here.
 
 
@@ -12,6 +14,7 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified item to the shopping cart """
 
+    storeitem = StoreItem.objects.get(pk=item_id)
     quantity_raw = request.POST.get('quantity')
     quantity = int(
         quantity_raw) if quantity_raw and quantity_raw.isdigit() else 0
@@ -35,6 +38,7 @@ def add_to_cart(request, item_id):
             cart[item_id] += quantity
         else:
             cart[item_id] = quantity
+            messages.success(request, f'Added {storeitem.name} to your cart.')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
