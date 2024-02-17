@@ -10,20 +10,33 @@
 {% endblock %}
 
 {% block content %}
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
-            <h1 class="display-4 text-white">
-                Get your FMCI merchandise here
-            </h1>
-            <div class="my-5">
-                <h4>
-                    <a href="{% url 'store' %}"
-                        class="shop-now-button btn opacity-25 btn-lg rounded-0 text-uppercase py-3">
-                        Shop Now</a>
-                </h4>
-            </div>
+<div class="container info-text">
+    <div class="row text-white">
+        <h2><a class="text-white" href="https://futuremobilityireland.ie/">FMCI </a> is not Just A Testbed, We Are One Of The Most Established Development Centres For Advancing Your Future-Driven Innovations</h2>
+        <p>Our facility focuses on comprehensive mobility technologies that span both ground (autonomous driving, micro-mobility, smart cities, V2X communications) and air (unmanned drones, eVTOL, AAM, UTM) use cases. We support everyone from individual researchers to multi-national corporations, as well as start-ups and government entities. FMCI assists organisations to conceive, develop, trial, and deploy societally-transformative transport solutions not just here in Shannon, Ireland but on a global level.</p>
+    </div>
+    <div class="row h-100 no-padding">
+        <div class="col col-md-6 my-auto">
+            <h3 class="text-white">
+                Meanwhile, grab your FMCI merch
+            </h3>
+        </div>
+        <div class="col my-5 go-right">
+            <h4>                                
+                <a href="{% url 'store' %}"
+                    class="shop-now-button btn opacity-25 btn-lg rounded-0 text-uppercase py-3">
+                    <span class="icon mr-2">
+                        <i class="fas fa-cart-plus"></i>
+                    </span>
+                    <span>  Shop Now  </span>
+                    <span class="icon">
+                        <i class="fas fa-chevron-right"></i>
+                    </span>
+                </a> 
+            </h4>
         </div>
     </div>
 </div>
+
+
 {% endblock %}
