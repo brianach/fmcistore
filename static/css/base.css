@@ -92,6 +92,22 @@ body {
     min-width: 260px;
 }
 
+.text-middle {
+    justify-content: space-around;
+}
+
+.carousel-item {
+    max-height: none;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    height: 150px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .go-right {
     display: flex;
     justify-self: flex-end;

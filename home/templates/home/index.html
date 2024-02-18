@@ -12,7 +12,7 @@
 {% block content %}
 <div class="container info-text">
     <div class="row text-white">
-        <h2><a class="text-white fmci-button btn opacity-25 rounded-0" href="https://futuremobilityireland.ie/" target="_blank">FMCI </a>is not Just A Testbed, We Are One Of The Most Established Development Centres For Advancing Your Future-Driven Innovations</h2>
+        <h2><a class="text-white fmci-button btn opacity-25 rounded-0" href="https://futuremobilityireland.ie/" target="_blank">FMCI </a> is not Just A Testbed, We Are One Of The Most Established Development Centres For Advancing Your Future-Driven Innovations</h2>
         <p>Our facility focuses on comprehensive mobility technologies that span both ground (autonomous driving, micro-mobility, smart cities, V2X communications) and air (unmanned drones, eVTOL, AAM, UTM) use cases. We support everyone from individual researchers to multi-national corporations, as well as start-ups and government entities. FMCI assists organisations to conceive, develop, trial, and deploy societally-transformative transport solutions not just here in Shannon, Ireland but on a global level.</p>
     </div>
     <div class="row h-100 no-padding">
@@ -39,23 +39,19 @@
 </div>
 
 <hr>
-Our Founding Partners
+<div class="container">
+    <div class="row text-white text-middle">
+        <h3 class="text-white">Our Founding Partners</h3>
+    </div>
+</div>
+<hr>
 
 <div class="container">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            {% for image in partner_images %}
-            <li data-target="#carouselExampleCaptions" data-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active"{% endif %}></li>
-            {% endfor %}
-        </ol>
         <div class="carousel-inner">
             {% for image in partner_images %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                <img src="{{ image.p_image.url }}" class="d-block w-100" alt="{{ image.p_name }}">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>{{ image.p_name }}</h5>
-                    <p>{{ image.p_link }}</p>
-                </div>
+                <a href="{{ image.p_link }}" target="_blank"><img src="{{ image.p_image.url }}" class="d-block" alt="{{ image.p_name }}"></a>
             </div>
             {% endfor %}
         </div>
@@ -69,5 +65,6 @@ Our Founding Partners
         </button>
     </div>
 </div>
+
 
 {% endblock %}
