@@ -74,6 +74,17 @@ body {
     padding-right: 0;
 }
 
+.fmci-button {
+    font-size: larger;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: #457893;
+    background: transparent;
+    color: white;
+}
+
 .shop-now-button {
     border-color: #457893;
     background: transparent;
