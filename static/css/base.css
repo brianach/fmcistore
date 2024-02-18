@@ -85,13 +85,6 @@ body {
     color: white;
 }
 
-.shop-now-button {
-    border-color: #457893;
-    background: transparent;
-    color: white;
-    min-width: 260px;
-}
-
 .text-middle {
     justify-content: space-around;
 }
@@ -117,6 +110,13 @@ body {
 .btn-black {
     background: black;
     color: white;
+}
+
+.shop-now-button {
+    border-color: #457893;
+    background: transparent;
+    color: white;
+    min-width: 260px;
 }
 
 .shop-now-button:hover,
@@ -369,4 +369,28 @@ input[name='q']::placeholder {
     /*.header-container {
         padding-top: 164px;
     }*/
+}
+
+/* Media query for screens less than 640 pixels wide */
+@media (max-width: 640px) {
+    .carousel-item img {
+        height: 100px; /* Adjust height for smaller screens */
+    }
+}
+
+/* Media query for screens less than 460 pixels wide */
+@media (max-width: 460px) {
+    .carousel-item img {
+        height: 80px; /* Adjust height for smaller screens */
+    }
+    .shop-now-button {
+        min-width: 200px;
+    }
+}
+
+/* Media query for screens less than 320 pixels wide */
+@media (max-width: 320px) {
+    .carousel-item img {
+        height: 60px; /* Adjust height for even smaller screens */
+    }
 }
