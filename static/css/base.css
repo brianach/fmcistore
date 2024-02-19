@@ -386,11 +386,16 @@ input[name='q']::placeholder {
     .shop-now-button {
         min-width: 200px;
     }
+    .go-right {
+        display: flex;
+        justify-self: center;
+        justify-content: center;
+    }
 }
 
 /* Media query for screens less than 320 pixels wide */
 @media (max-width: 320px) {
     .carousel-item img {
-        height: 60px; /* Adjust height for even smaller screens */
+        height: 50px; /* Adjust height for even smaller screens */
     }
 }
