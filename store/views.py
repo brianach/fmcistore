@@ -6,6 +6,7 @@ from django.db.models.functions import Lower
 
 from .models import StoreItem, Category
 from .forms import StoreItemForm
+
 # Create your views here.
 
 
@@ -27,7 +28,7 @@ def all_storeitems(request):
                 sortkey = 'lower_name'
                 store = store.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
-                sortkey = 'category__name'
+                sortkey = 'category_name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']

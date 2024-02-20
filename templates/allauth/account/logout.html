@@ -8,7 +8,7 @@
 <hr>
 <h2 class="text-white mb-4">{% trans "Sign Out" %}</h2>
 <hr>
-<p class="text-white">{% trans 'Are you sure you want to sign out?' %}</p>
+<p class="text-white">{% trans 'Are you sure you want to sign out ' %}{{ request.user.get_full_name }}{{ '?' }} </p>
 
 <form method="post" action="{% url 'account_logout' %}">
   {% csrf_token %}
