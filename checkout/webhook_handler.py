@@ -14,11 +14,14 @@ import time
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 
-    print('Stripe Webhooks Triggered')
     def __init__(self, request):
         self.request = request
 
     def _send_confirmation_email(self, order):
+                
+        # Test print
+        print("Email Confirmation Stage 1")
+        
         """Send the user a confirmation email"""
         cust_email = order.email
         subject = render_to_string(
@@ -27,6 +30,9 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+        # Test print
+        print("Email Confirmation Stage 2")
         
         send_mail(
             subject,
@@ -34,7 +40,9 @@ class StripeWH_Handler:
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
         )
-        print('Confirmation email created')        
+
+        # Test print
+        print("Email Confirmation Stage 3")     
 
     def handle_event(self, event):
         """
@@ -48,11 +56,13 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.succeeded webhook from Stripe
         """
-        print('Payment Intent Handler Triggered')
         intent = event.data.object
         pid = intent.id
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
+
+        # Test print
+        print("Stage 1")
 
         # Get the Charge object
         stripe_charge = stripe.Charge.retrieve(
@@ -63,6 +73,9 @@ class StripeWH_Handler:
         shipping_details = intent.shipping
         grand_total = round(stripe_charge.amount / 100, 2) # updated
 
+        # Test print
+        print("Stage 2")
+
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
             if value == "":
@@ -71,6 +84,10 @@ class StripeWH_Handler:
         # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
+        
+        # Test print
+        print("Stage 3")
+        
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
@@ -85,6 +102,10 @@ class StripeWH_Handler:
 
         order_exists = False
         attempt = 1
+        
+        # Test print
+        print("Stage 4")
+        
         while attempt <= 5:
             try:
                 order = Order.objects.get(
@@ -106,12 +127,28 @@ class StripeWH_Handler:
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
+                
+        # Test print
+        print("Stage 5")
+        
         if order_exists:
+            
+            # Test print
+            print("Stage 5.1")
+
             self._send_confirmation_email(order)
+            
+            # Test print
+            print("Stage 5.2")
+
             return HttpResponse(
                 content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
                 status=200)
         else:
+
+            # Test print            
+            print("Stage 5.3")
+            
             order = None
             try:
                 order = Order.objects.create(
@@ -130,11 +167,12 @@ class StripeWH_Handler:
                 )
                 for item_id, item_data in json.loads(cart).items():
                     StoreItem = StoreItem.objects.get(id=item_id)
+                    print("StoreItem value is: ",StoreItem)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
                             StoreItem=StoreItem,
-                            quantity=item_data,
+                                                        quantity=item_data,
                         )
                         order_line_item.save()
                     else:
@@ -147,12 +185,19 @@ class StripeWH_Handler:
                             )
                             order_line_item.save()
             except Exception as e:
+                            
+                print("Stage 5.1.1")
+            
                 if order:
                     order.delete()
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
         self._send_confirmation_email(order)
+        
+        # Test print
+        print("Stage 6")
+        
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
