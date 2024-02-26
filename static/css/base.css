@@ -47,6 +47,16 @@ body {
     width: 1.5rem;
 }
 
+/* separate style to align keep shopping and secure checkup out button on smaller screen */
+.chevron-icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 13px; /* it would be cool to use js but that would increase the code footprint */
+}
+
+
 .logo-font {
     text-transform: uppercase;
 }
