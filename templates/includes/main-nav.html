@@ -59,7 +59,7 @@
         aria-expanded="false"
       >
         {% if request.user.is_authenticated %}
-        {{ request.user.get_full_name }}
+        <span style="color: black; background-color: #7fd2ef; text-wrap: nowrap; font-style: italic;">&nbsp;{{ request.user.get_full_name }}&nbsp;</span>          
         {% else %}
         Login
         {% endif %}
