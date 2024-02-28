@@ -36,7 +36,7 @@ class UserProfileForm(forms.ModelForm):
 
 
 class CustomSignupForm(SignupForm):
-    # Prepopulate the First Name and Last Name fields with some text
+    # Prepopulate the First Name and Last Name fields
     first_name = forms.CharField(max_length=30, label='First Name', widget=forms.TextInput(attrs={'placeholder': 'Enter your first name'}))
     last_name = forms.CharField(max_length=30, label='First Name', widget=forms.TextInput(attrs={'placeholder': 'Enter your last name'}))
 

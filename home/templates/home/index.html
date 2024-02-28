@@ -12,7 +12,8 @@
 {% block content %}
 <div class="container info-text">
     <div class="row text-white">
-        <h2><a class="text-white fmci-button btn opacity-25 rounded-0" href="https://futuremobilityireland.ie/" target="_blank">FMCI </a> is not Just A Testbed.</h2>
+        <h2><a class="text-white fmci-button btn opacity-25 rounded-0" 
+            href="https://futuremobilityireland.ie/" target="_blank">FMCI </a> is not Just A Testbed.</h2>
         <p>We Are One Of The Most Established Development Centres For Advancing Your Future-Driven Innovations.
             Our facility focuses on comprehensive mobility technologies that span both ground (autonomous driving, 
             micro-mobility, smart cities, V2X communications) and air (unmanned drones, eVTOL, AAM, UTM) use cases. 
@@ -56,7 +57,9 @@
         <div class="carousel-inner">
             {% for image in partner_images %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                <a href="{{ image.p_link }}" target="_blank"><img src="{{ image.p_image.url }}" class="d-block" alt="{{ image.p_name }}"></a>
+                <a href="{{ image.p_link }}" target="_blank">
+                    <img src="{{ image.p_image.url }}" class="d-block" alt="{{ image.p_name }}">
+                </a>
             </div>
             {% endfor %}
         </div>
