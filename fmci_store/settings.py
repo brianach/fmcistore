@@ -15,10 +15,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = True
+#DEBUG = True
 DEVELOPMENT = True
 
-SECRET_KEY = 'django-insecure-0_5zeu0$d50*sij794wu^c3)ui)83%0z7q9akha(y6)afjg7j@'
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ALLOWED_HOSTS = ['8000-brianach-fmcistore-as13qaxm2bk.ws-eu108.gitpod.io',
                  'fmcistore-366e47ff9414.herokuapp.com', 'localhost']
