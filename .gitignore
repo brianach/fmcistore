@@ -10,3 +10,6 @@ cloudinary_python.txt
 *.sqlite3
 *.pyc
 ex.txt
+fmci_db.json
+package-lock.json
+package.json

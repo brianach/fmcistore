@@ -15,6 +15,9 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+DEBUG = True
+DEVELOPMENT = True
+
 SECRET_KEY = 'django-insecure-0_5zeu0$d50*sij794wu^c3)ui)83%0z7q9akha(y6)afjg7j@'
 
 ALLOWED_HOSTS = ['8000-brianach-fmcistore-as13qaxm2bk.ws-eu108.gitpod.io',
