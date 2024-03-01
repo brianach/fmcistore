@@ -79,7 +79,8 @@
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3">
                                         <a href="{% url 'edit_storeitem' storeitem.id %}">Edit</a> | 
-                                        <a class="text-danger" href="{% url 'delete_storeitem' storeitem.id %}">Delete</a>
+                                        <!--<a class="text-danger" href="{% url 'delete_storeitem' storeitem.id %}">Delete</a>-->
+                                        <a class="text-danger" href="#" onclick="confirm_delete('{% url 'delete_storeitem' storeitem.id %}')">Delete</a>
                                     </small>
                                     {% endif %}
                                 </div>
@@ -114,4 +115,16 @@
         <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
     </a>	
 </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+<script type="text/javascript">
+    function confirm_delete(recipe_delete_url){
+        var delete_confirmed = window.confirm("Delete this product?");
+        if (delete_confirmed){
+            window.location.href = recipe_delete_url;
+        }
+    }
+</script>
 {% endblock %}
