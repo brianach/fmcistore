@@ -22,30 +22,18 @@ Wearable merchandice can be ordered in various sizes where available.
   - [General Color Scheme](#general-color-scheme)
   - [Logo](#logo)
   - [Home](#home)
-  - [About](#about)
-  - [Map](#map)
-    - [Popup](#popup)
   - [User Authentication](#user-authentication)
 - [User Experience](#user-experience)
 - [Testing](#testing)
   - [User Stories](#user-stories)
   - [Desktop](#desktop)
       - [Content Page](#content-page)
-      - [Comments](#comments)
-    - [About Page](#about-page-1)
-    - [Map Page](#map-page-1)
     - [Authentication](#authentication-1)
   - [Tablet](#tablet)
       - [Content Page](#content-page-1)
-      - [Comments](#comments-1)
-    - [About Page](#about-page-2)
-    - [Map Page](#map-page-2)
     - [Authentication](#authentication-2)
   - [Mobile](#mobile)
       - [Content Page](#content-page-2)
-      - [Comments](#comments-2)
-    - [About Page](#about-page-3)
-    - [Map Page](#map-page-3)
     - [Authentication](#authentication-3)
   - [Map Interaction](#map-interaction)
 - [Technologies](#technologies)
@@ -79,63 +67,53 @@ Users can register an account whcih gives them the ability to see their order hi
 
 ## Database Model
 
-The FMCI databases utilizes five models with relationships as shown in the following diagram. 
+The FMCI databases utilizes a number of models with relationships as shown in the following diagram. 
 
 <details>
 <summary>ERM</summary>
 
-![ERM](/media/erm.png)
+![ERM](/static/readmeimg/erm.png)
 
 </details>
 
-A well record must exist before a post can be created. When the post is saved, the well's *'townland'* and *'county'* fields are joined and saved as a single *'location'* field in the post, and the well's *'cures'* field is saved to the *'cures'* field in the post record.
+There are five categories of goods and services of which only goods may be purchased online. The Spaces and Services are purchases by emailing or by tenant customers only availabe on site.
 
 ## General Color Scheme
 
-I used a very simple color scheme almost verging on black & white for simplicity and good color contrast. The navbar, footer, button elements and poat body text all use a charcoal colour while white is used for logos, icons, elements and text whcih have charcoal backgrounds.
+I based the color scheme on the main [FMCI](https://futuremobilityireland.ie/) webpage. Font colours were chosen to make the best use of contrast in order to assist with visbility and clarity.
 
 <details>
 <summary>Color Scheme</summary>
 
-![Color Scheme](/media/color-scheme.png)
+![Color Scheme](/static/readmeimg/colors.png)
 
 </details>
 
 ## Logo
 
-The logo is made up of a water droplet and a celtic spiral. I tilted the spiral horizontally to give the impression of water ripples.
+The logo is FMCI's tradin logo which is based on a wireless communications icon in the colours of the Irish flag.
 
 ## Home
 
-I used the same basic layout as CI's "I think therefore I blog" tutorial with a slight alteration to the color pallet.
+I used a similiar layout to the "Boutique Ado" tutorial with a the previously mentioned alteration to the color pallet.
 
 <details>
 
-<summary>Homepage Laptop Mockup</summary>
+<summary>Homepage Mockup</summary>
 
-![Homepage Laptop Mockup](/media/lap/homepage-large-mockup.png)
+![Homepage Mockup](/static/readmeimg/home.png)
 
 </details>
 
 <details>
 
-<summary>Mobile Laptop Mockup</summary>
+<summary>Store Page Mockup</summary>
 
-![Homepage Mobile Mockup](/media/mob/mobile-homepage-mockup.png)
+![Store Page Mockup](/static/readmeimg/store.png)
 
 </details>
 
-## About
 
-Again simplicty is the order of the day for the about page which contains a single large image and information under a number of headings relating to the holy wells in general.
-
-## Map
-
-The map uses the same page tempalate for the navigation bar and footer as the above mentioned pages but I opted to lock the footer so that it would remain in place while scrolling the map downwards. I used my logo for the markers for well locations.
-
-### Popup
-
-The popup uses the Mapbox popup element and I created a popup template which loads once the popup is clicked. My logo is used once again and the popup has a title matching the well name which becomes a link if there is a related post for that well. Below that is an excerpt from that post if it exists and at the bottom a button which opens the location in Google maps using the well's coordinates. More information relating to the map and popup functionality is contained in the [notes](#notes).
 
 ## User Authentication
 
@@ -145,19 +123,20 @@ The popup uses the Mapbox popup element and I created a popup template which loa
 
 User stories were created to aid in the planning of the site and for the agile tasks for the application project.
 
-- As a staff user I can create location records so that markers will be available on the map
-- As a staff user I can create a post so that users can get information about a well
-- As a visitor I can read posts on the home page
-- As a visitor I can read an about page to get some background
-- As a visitor I can access a map page to see where wells are located
-- As a visitor I can click on a well marker to open a popup
-- As a visitor I can click on the popup title to read more information
-- As a visitor I can click on a button in the popup to see the location in google maps
-- As a user I can register on the site
-- As a user I can like or unlike posts
-- As a user I can add comments to information pages
-- As a site user I can edit or delete my own comments
-- As a staff user I can approve comments made by user
+- As a staff user I can edit a product so that it is up to date 
+- As a staff user I can add a product so that users can purchase it
+- As a staff user I can delete a product so that it is no longer shown
+- As a visitor I view products and services
+- As a visitor I can purchase products
+- As a visitor I can select wearable products in different sizes
+- As a visitor I can select wearable products and accessories
+- As a visitor I can modify my cart and add or remove products
+- As a visitor I can register so that I become a site user
+- As a user I can login so that I can see my order history
+- As a user I can login so that I can change my delivery details
+- As a user I can select wearable products in different sizes
+- As a user I can select wearable products and accessories
+- As a user I can modify my cart and add or remove products
 
 ---
 
@@ -166,184 +145,6 @@ User stories were created to aid in the planning of the site and for the agile t
 ## User Stories
 
 Each user story has its own Agile task. In this way the implementation and the testing is integrated as one. A task may have dependencies which must be in place in order for the current task to be completed. An example of this is shown here.
-
-<details>
-<summary>Agile-Task</summary>
-
-![Agile-Task](media/agile-task.png)
-
-</details>
-
-Detailed user story testing can be found [here](CodeTesting.md##user-story-testing)
-
-The following screenshots show the result of user actions on the various platforms. First we see the screenshots of various menu choices and internal content interactions for desktop or laptop devices, followed respectively by tablet devices and finally mobile phone devices. The testing indicates that content and pages are accessible on all formats.
-
-The styling has been slightly changed since the screenshots were taken. The page now uses the same background color for the navigation bar, post title masthead, comment submit & edit buttons, and for all the authentication buttons.
-
-&nbsp;
-
-## Desktop
-
-<details>
-<summary>Home Page</summary>
-
-![Home](media/lap/home.png)
-
-</details>
-
-#### Content Page
-
-On clicking on any of the posts from the Home Page or on a link from the Map Page popup the user will then be able to view the content related to that item.
-
-<details>
-<summary>Content Page</summary>
-
-![Home](media/lap/content.png)
-
-</details>
-
-#### Comments
-
-Once in the content page a user may post, edit and delete their own comments. When a comment is posted or edited the user will see the post in greyed out text with a <span style="color: rgb(222, 146, 168);"> *'This comment is awaiting approval'* </span> message below the comment, indicating that the comment is waiting approval by a moderator.
-
-<details>
-<summary>Post Comment
-
-</summary>
-
-![Home](media/lap/comment-1.png)
-
-</details>
-
-<details>
-<summary>Edit Comment
-
-</summary>
-
-![Home](media/lap/comment-2.png)
-
-</details>
-
-<details>
-<summary>Delete Comment
-
-</summary>
-
-![Home](media/lap/comment-3.png)
-
-</details>
-
-### About Page
-
-<details>
-<summary>About Page</summary>
-
-![Home](media/lap/about.png)
-
-</details>
-
-### Map Page
-
-<details>
-<summary>Map Page</summary>
-
-![Home](media/lap/map.png)
-
-</details>
-
-### Authentication
-
-<details>
-<summary>Login Modal</summary>
-
-![Home](media/lap/login.png)
-
-</details>
-
-<details>
-<summary>Logout Modal</summary>
-
-![Home](media/lap/logout.png)
-
-</details>
-
-<details>
-<summary>Register Modal</summary>
-
-![Home](media/lap/register.png)
-
-</details>
-
-&nbsp;
-
-## Tablet
-
-<details>
-<summary>Home Page</summary>
-
-![Home](media/tab/home-tab.png)
-
-</details>
-
-#### Content Page
-
-On clicking on any of the posts from the Home Page or on a link from the Map Page popup the user will then be able to view the content related to that item.
-
-<details>
-<summary>Content Page</summary>
-
-![Home](media/tab/content-tab.png)
-
-</details>
-
-#### Comments
-
-Once in the content page a user may post, edit and delete their own comments. When a comment is posted or edited the user will see the post in greyed out text with a <span style="color: rgb(222, 146, 168);"> *'This comment is awaiting approval'* </span> message below the comment, indicating that the comment is waiting approval by a moderator.
-
-<details>
-<summary>Post Comment
-
-</summary>
-
-![Home](media/tab/comment-tab1.png)
-
-</details>
-
-<details>
-<summary>Edit Comment
-
-</summary>
-
-![Home](media/tab/comment-tab2.png)
-
-</details>
-
-<details>
-<summary>Delete Comment
-
-</summary>
-
-![Home](media/tab/comment-tab3.png)
-
-</details>
-
-### About Page
-
-<details>
-<summary>About Page</summary>
-
-![Home](media/tab/about-tab.png)
-
-</details>
-
-### Map Page
-
-<details>
-<summary>Map Page</summary>
-
-![Home](media/tab/map-tab.png)
-
-</details>
 
 ### Authentication
 
