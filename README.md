@@ -2,22 +2,20 @@
 
 ![FMCI logo](media/logo.png)
 
-[FMCI Store](https://fmcistore-366e47ff9414.herokuapp.com/) gives interested users and visitirs the opportunity to buy FMCI merchandice as well as the ability to view facilities and services on offer to businesses and automotive product developers.Visitors have access to all the available information.
+[FMCI Store](https://fmcistore-366e47ff9414.herokuapp.com/) gives interested users and visitors the opportunity to buy FMCI merchandice as well as the ability to view facilities and services on offer to businesses and automotive product developers.Visitors have access to all the available information.
 
 Registered users can access records of previous purchases in their profile. Staff users can edit existing products and alos add or delete products as necessary. Staff users can also view and edit orders as may be required at the request of customers.
 
 Wearable merchandice can be ordered in various sizes where available.
 
-![Wells](/media/screens.png)
+![FMCI Store](/media/screens.png)
 
 # Table of Contents
 
-- [Wells](#wells)
+- [FMCI Store](#wells)
 - [Table of Contents](#table-of-contents)
 - [Features](#features)
   - [Home Page](#home-page)
-  - [About Page](#about-page)
-  - [Map Page](#map-page)
   - [Authentication](#authentication)
 - [Design](#design)
   - [Database Model](#database-model)
@@ -68,21 +66,12 @@ Wearable merchandice can be ordered in various sizes where available.
 
 ## Home Page
 
-The home page contains links to pages with information and details about any wells for which a linked page exists. Not all wells have detailed information pages but every information page must have a corresponding well entry.
+The home page contains a summary of what FMCI does preceded by a link to the main FMCI homepage. A scrolling carousel runs at the bottom of the page which displays a clickable logo for each of FMCI's partners which when clicked open the partner's home page on a separate tab. The carousel is loaded from a simple django database model which can be edited by a superuser via the admin page.
 
-Each entry has a photograph of its related well and contains the author's name. Each post displays a brief excerpt from the page contents and the date on which the content page was created followed by a like (heart) icon, showing the numbber of page likes.
-
-## About Page
-
-The about page shows a historic painting depicing one of the wells and a general background or history of the subject matter.
-
-## Map Page
-
-The map page displays a scrollable and zoomable map with markers indicating the location of each well. Clicking the markers results in a popup with a link to the well information page, where one exists, and a button which when clicked open google maps centered on the related location marker. The user can then click on the 'directions' button in google maps to navigate to the entry from their current or chosen location.
 
 ## Authentication
 
-Users can register an account in order to comment on the information pages. Existing users can login and logout and are presented with a link to login if they have not already done so or to logout if they are already logged in.
+Users can register an account whcih gives them the ability to see their order history. Logged in users will see their full name displayed as dropdown link at the top of the navbar from where they can see a link to their profile, or to logout.
 
 ---
 
@@ -90,7 +79,7 @@ Users can register an account in order to comment on the information pages. Exis
 
 ## Database Model
 
-The wells databases utilizes three main models with relationships as shown in the following diagram. I've included the builtin Djano User model to show its relationships to the three models.
+The FMCI databases utilizes five models with relationships as shown in the following diagram. 
 
 <details>
 <summary>ERM</summary>
