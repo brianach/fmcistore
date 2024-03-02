@@ -67,7 +67,7 @@
       <div class="dropdown-menu border-0" aria-labelledby="user-options">
         <!-- prettier-ignore -->
         {% if request.user.is_authenticated %}
-        {% if request.user.is_superuser%}
+        {% if request.user.is_staff%}
         <a href="{% url 'add_storeitem' %}" class="dropdown-item">Add Product</a>
         {% endif %}
         <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>

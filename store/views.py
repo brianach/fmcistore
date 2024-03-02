@@ -80,7 +80,7 @@ def storeitem_detail(request, storeitem_id):
 
 @login_required
 def add_storeitem(request):
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
@@ -106,7 +106,7 @@ def add_storeitem(request):
 
 @login_required
 def edit_storeitem(request, storeitem_id):
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
@@ -135,7 +135,7 @@ def edit_storeitem(request, storeitem_id):
 
 @login_required
 def delete_storeitem(request, storeitem_id):
-    if not request.user.is_superuser:
+    if not request.user.is_staff:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
