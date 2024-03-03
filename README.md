@@ -59,7 +59,7 @@ The home page contains a summary of what FMCI does preceded by a link to the mai
 
 ## Authentication
 
-Users can register an account whcih gives them the ability to see their order history. Logged in users will see their full name displayed as dropdown link at the top of the navbar from where they can see a link to their profile, or to logout.
+Users can register an account which gives them the ability to see their order history. Logged in users will see their full name displayed as dropdown link at the top of the navbar from where they can see a link to their profile, or to logout.
 
 ---
 
@@ -149,7 +149,14 @@ Each user story has its own Agile task. In this way the implementation and the t
 ### Authentication
 
 <details>
-<summary>Login Modal</summary>
+<summary>Visitor Journey</summary>
+
+- As a visitor I view products and services
+- As a visitor I can purchase products
+- As a visitor I can select wearable products in different sizes
+- As a visitor I can select wearable products and accessories
+- As a visitor I can modify my cart and add or remove products
+- As a visitor I can register so that I become a site user
 
 ![Home](media/tab/login-tab.png)
 
