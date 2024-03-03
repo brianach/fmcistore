@@ -199,10 +199,28 @@ Each user story has its own Agile task. In this way the implementation and the t
 ![Accessory](/static/readmeimg/visitor/visitor-register.png)
 </details>
 
+<details><summary>As a visitor I will receive a registration verification link in an email</summary>
+
+![Accessory](/static/readmeimg/visitor/visitor-reg-confirm-email.png)
+</details>
+
+<details><summary>As a visitor I can click a registration verification link from an email</summary>
+
+![Accessory](/static/readmeimg/visitor/user-reg-confirm.png)
+</details>
+
+<details><summary>As a visitor I can get a registration acknowledgement alert</summary>
+
+![Accessory](/static/readmeimg/visitor/visitor-reg-ack.png)
+</details>
 
 ### User Journey
 
 <details><summary>As a user I can login so that I can see my order history</summary>
+
+![Accessory](/static/readmeimg/user/user-login.png)
+</details>
+
 <details><summary>As a user I can login so that I can change my delivery details</summary>
 <details><summary>As a user I can select wearable products in different sizes</summary>
 <details><summary>As a user I can select wearable products and accessories</summary>
