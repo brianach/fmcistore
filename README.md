@@ -114,33 +114,9 @@ I used a similiar layout to the "Boutique Ado" tutorial with a the previously me
 </details>
 
 
-
-## User Authentication
-
 ---
 
-# User Experience
-
-User stories were created to aid in the planning of the site and for the agile tasks for the application project.
-
-- As a staff user I can edit a product so that it is up to date 
-- As a staff user I can add a product so that users can purchase it
-- As a staff user I can delete a product so that it is no longer shown
-- As a visitor I view products and services
-- As a visitor I can purchase products
-- As a visitor I can select wearable products in different sizes
-- As a visitor I can select wearable products and accessories
-- As a visitor I can modify my cart and add or remove products
-- As a visitor I can register so that I become a site user
-- As a user I can login so that I can see my order history
-- As a user I can login so that I can change my delivery details
-- As a user I can select wearable products in different sizes
-- As a user I can select wearable products and accessories
-- As a user I can modify my cart and add or remove products
-
----
-
-# Testing
+# User Experience & Testing
 
 ## User Stories
 
@@ -236,14 +212,19 @@ Each user story has its own Agile task. In this way the implementation and the t
 ![Accessory](/static/readmeimg/user/user-profile-update.png)
 </details>
 
-<details><summary>As a user I can view my past orders</summary>
+<details><summary>As a user I can view details of my orders</summary>
 
 ![Accessory](/static/readmeimg/user/user-orders.png)
 </details>
 
-<details><summary>As a user I can view details of my orders</summary>
+<details><summary>As a user I can view my past orders</summary>
 
-![Accessory](/static/readmeimg/user/user-orders.png)
+![Accessory](/static/readmeimg/user/past-orders.png)
+</details>
+
+<details><summary>As a user I can log out of my account</summary>
+
+![Accessory](/static/readmeimg/user/user-logout.png)
 </details>
 
 ### Authentication
