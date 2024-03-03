@@ -227,6 +227,41 @@ Each user story has its own Agile task. In this way the implementation and the t
 ![Accessory](/static/readmeimg/user/user-logout.png)
 </details>
 
+<details><summary>As a user I can verify I've logged out of my account</summary>
+
+![Accessory](/static/readmeimg/user/user-logout-success.png)
+</details>
+
+
+### Staff Journey
+
+
+<details><summary>As a staff member I can manage store products</summary>
+
+![Accessory](/static/readmeimg/staff/staff-store.png)
+</details>
+
+<details><summary>As a staff member I can edit store products</summary>
+
+![Accessory](/static/readmeimg/staff/staff-edit.png)
+</details>
+
+<details><summary>As a staff member I can delete store products with confirmation warning</summary>
+
+![Accessory](/static/readmeimg/staff/staff-delete.png)
+</details>
+
+
+<details><summary>As a staff member I can add a new product</summary>
+
+![Accessory](/static/readmeimg/staff/staff-add.png)
+</details>
+
+<details><summary>As a staff member I can view confirm product is added</summary>
+
+![Accessory](/static/readmeimg/staff/staff-new-product.png)
+</details>
+
 ### Authentication
 
 <details>
