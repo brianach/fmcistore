@@ -146,106 +146,67 @@ User stories were created to aid in the planning of the site and for the agile t
 
 Each user story has its own Agile task. In this way the implementation and the testing is integrated as one. A task may have dependencies which must be in place in order for the current task to be completed. An example of this is shown here.
 
-### Authentication
+### Visitor Journey
+  
+<details><summary>As a visitor I can use a menu to view products and services</summary>
 
-<details>
-<summary>Visitor Journey</summary>
-
-- As a visitor I view products and services
-- As a visitor I can purchase products
-- As a visitor I can select wearable products in different sizes
-- As a visitor I can select wearable products and accessories
-- As a visitor I can modify my cart and add or remove products
-- As a visitor I can register so that I become a site user
-
-![Home](media/tab/login-tab.png)
-
+![Menu](/static/readmeimg/visitor/visitor-menu.png)
 </details>
 
-<details>
-<summary>Logout Modal</summary>
 
-![Home](media/tab/logout-tab.png)
+<details><summary>As a visitor I access the store so I can purchase products</summary>
 
+![Store](/static/readmeimg/visitor/visitor-store.png)
 </details>
 
-<details>
-<summary>Register Modal</summary>
+<details><summary>As a visitor I can select wearable products and accessories</summary>
 
-![Home](media/tab/reg-tab.png)
-
+![Accessory](/static/readmeimg/visitor/visitor-accessory.png)
 </details>
 
-&nbsp;
+<details><summary>As a visitor I can select wearable products in different sizes</summary>
 
-## Mobile
-
-<details>
-<summary>Home Page</summary>
-
-![Home](media/mob/home-mob.png)
-
+![Accessory](/static/readmeimg/visitor/visitor-sizes.png)
 </details>
 
-#### Content Page
+<details><summary>As a visitor I can modify my cart and add or remove products</summary>
 
-On clicking on any of the posts from the Home Page or on a link from the Map Page popup the user will then be able to view the content related to that item.
-
-<details>
-<summary>Content Page</summary>
-
-![Home](media/mob/content-mob.png)
-
+![Accessory](/static/readmeimg/visitor/visitor-modify.png)
 </details>
 
-#### Comments
+<details><summary>As a visitor I can checkout and complete my product purchases</summary>
 
-Once in the content page a user may post, edit and delete their own comments. When a comment is posted or edited the user will see the post in greyed out text with a <span style="color: rgb(222, 146, 168);"> *'This comment is awaiting approval'* </span> message below the comment, indicating that the comment is waiting approval by a moderator.
-
-<details>
-<summary>Post Comment
-
-</summary>
-
-![Home](media/mob/comment-mob1.png)
-
+![Accessory](/static/readmeimg/visitor/visitor-order.png)
 </details>
 
-<details>
-<summary>Edit Comment
+<details><summary>As a visitor I can see that my order is processing</summary>
 
-</summary>
-
-![Home](media/mob/comment-mob2.png)
-
+![Accessory](/static/readmeimg/visitor/visitor-stripe.png)
 </details>
 
-<details>
-<summary>Delete Comment
+<details><summary>As a visitor I can see that my order is successfull</summary>
 
-</summary>
-
-![Home](media/mob/comment-mob3.png)
-
+![Accessory](/static/readmeimg/visitor/visitor-success.png)
 </details>
 
-### About Page
+<details><summary>As a visitor I receive an order confirmation email</summary>
 
-<details>
-<summary>About Page</summary>
-
-![Home](media/mob/about-mob.png)
-
+![Accessory](/static/readmeimg/visitor/visitor-order-email.png)
 </details>
 
-### Map Page
+<details><summary>As a visitor I can register so that I become a site user</summary>
 
-<details>
-<summary>Map Page</summary>
-
-![Home](media/mob/map-mob.png)
-
+![Accessory](/static/readmeimg/visitor/visitor-register.png)
 </details>
+
+
+### User Journey
+
+<details><summary>As a user I can login so that I can see my order history</summary>
+<details><summary>As a user I can login so that I can change my delivery details</summary>
+<details><summary>As a user I can select wearable products in different sizes</summary>
+<details><summary>As a user I can select wearable products and accessories</summary>
+<details><summary>As a user I can modify my cart and add or remove products</summary>
 
 ### Authentication
 
