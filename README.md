@@ -216,15 +216,35 @@ Each user story has its own Agile task. In this way the implementation and the t
 
 ### User Journey
 
-<details><summary>As a user I can login so that I can see my order history</summary>
+<details><summary>As a user I can log in to my account</summary>
 
 ![Accessory](/static/readmeimg/user/user-login.png)
 </details>
 
-<details><summary>As a user I can login so that I can change my delivery details</summary>
-<details><summary>As a user I can select wearable products in different sizes</summary>
-<details><summary>As a user I can select wearable products and accessories</summary>
-<details><summary>As a user I can modify my cart and add or remove products</summary>
+<details><summary>As a user I can see my name when logged in</summary>
+
+![Accessory](/static/readmeimg/user/user-visible.png)
+</details>
+
+<details><summary>As a user I can view my user profile</summary>
+
+![Accessory](/static/readmeimg/user/user-profile.png)
+</details>
+
+<details><summary>As a user I can modify my profile</summary>
+
+![Accessory](/static/readmeimg/user/user-profile-update.png)
+</details>
+
+<details><summary>As a user I can view my past orders</summary>
+
+![Accessory](/static/readmeimg/user/user-orders.png)
+</details>
+
+<details><summary>As a user I can view details of my orders</summary>
+
+![Accessory](/static/readmeimg/user/user-orders.png)
+</details>
 
 ### Authentication
 
