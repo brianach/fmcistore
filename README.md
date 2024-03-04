@@ -2,40 +2,43 @@
 
 ![FMCI logo](media/logo.png)
 
-[FMCI Store](https://fmcistore-366e47ff9414.herokuapp.com/) gives interested users and visitors the opportunity to buy FMCI merchandice as well as the ability to view facilities and services on offer to businesses and automotive product developers.Visitors have access to all the available information.
+[FMCI Store](https://fmcistore-366e47ff9414.herokuapp.com/) gives interested users and visitors the opportunity to buy FMCI merchandice as well as the ability to view facilities and services on offer to businesses and automotive product developers. 
 
-Registered users can access records of previous purchases in their profile. Staff users can edit existing products and alos add or delete products as necessary. Staff users can also view and edit orders as may be required at the request of customers.
+- Visitors have access to all the published information and can create and complete orders. Visitors can also choose to register on the site.
 
-Wearable merchandice can be ordered in various sizes where available.
+- Registered users can access records of previous purchases in their profile. 
 
-![FMCI Store](/media/screens.png)
+- Staff users can edit existing products and also add or delete products as necessary.
 
+- Wearable merchandice can be ordered in various sizes wherewhen the option is available.
+
+![FMCI Store](/static/readmeimg/screens.png)
+
+&nbsp;
 # Table of Contents
 
-- [FMCI Store](#wells)
+- [FMCI Store](#fmci-store)
 - [Table of Contents](#table-of-contents)
 - [Features](#features)
   - [Home Page](#home-page)
+  - [Store](#store)
+  - [Other](#other-offerings)
   - [Authentication](#authentication)
+
 - [Design](#design)
   - [Database Model](#database-model)
   - [General Color Scheme](#general-color-scheme)
   - [Logo](#logo)
   - [Home](#home)
-  - [User Authentication](#user-authentication)
-- [User Experience](#user-experience)
-- [Testing](#testing)
+  - [Store](#store-1)
+  - [Other](#other-offerings-1)
+
+- [User Experience & Testing](#user-experience--testing)
   - [User Stories](#user-stories)
-  - [Desktop](#desktop)
-      - [Content Page](#content-page)
-    - [Authentication](#authentication-1)
-  - [Tablet](#tablet)
-      - [Content Page](#content-page-1)
-    - [Authentication](#authentication-2)
-  - [Mobile](#mobile)
-      - [Content Page](#content-page-2)
-    - [Authentication](#authentication-3)
-  - [Map Interaction](#map-interaction)
+    - [Visitor Journey](#visitor-journey)
+    - [User Journey](#user-journey)
+    - [Staff Journey](#staff-journey)
+
 - [Technologies](#technologies)
 - [Deployment](#deployment)
   - [Deploy site using Heroku](#deploy-site-using-heroku)
@@ -49,6 +52,8 @@ Wearable merchandice can be ordered in various sizes where available.
   - [Map Popup Dialog](#map-popup-dialog)
 
 ---
+---
+&nbsp;
 
 # Features
 
@@ -56,12 +61,22 @@ Wearable merchandice can be ordered in various sizes where available.
 
 The home page contains a summary of what FMCI does preceded by a link to the main FMCI homepage. A scrolling carousel runs at the bottom of the page which displays a clickable logo for each of FMCI's partners which when clicked open the partner's home page on a separate tab. The carousel is loaded from a simple django database model which can be edited by a superuser via the admin page.
 
+## Store
+
+Products can be purchased from a number of cathegories on the store page. The store dropdown menu allows for viewing the products by category or viewing the entire store on a single page. Visitors can order products without having to register and account. Registered users can access and modify their contact details and also view a list of previous orders. They can also click on any individual order to see what products are contained in it. Staff users can modify the existing products, delete products or add new products as required. Both users and staff users can see that they are logged in as the login menu item changes to their full name and is highlighted for better visibility.
+
+## Other Offerings
+
+The site shows what onsite spaces such as desks and labs are available to interested users. A table listing the various option is displayed alongside images of the spaces on offer. Additionally, compute and development services are offered and availabe for tenant or onsite customers. Tables outlining the various offerings are available for visitors and users to view.
+
 
 ## Authentication
 
-Users can register an account which gives them the ability to see their order history. Logged in users will see their full name displayed as dropdown link at the top of the navbar from where they can see a link to their profile, or to logout.
+Users can register an account which gives them the ability to see their order history. Logged in users will see their full name displayed above the information banner and highllighted for visibility. 
 
 ---
+---
+&nbsp;
 
 # Design
 
@@ -69,52 +84,51 @@ Users can register an account which gives them the ability to see their order hi
 
 The FMCI databases utilizes a number of models with relationships as shown in the following diagram. 
 
-<details>
-<summary>ERM</summary>
+<details><summary>ERM</summary>
 
-![ERM](/static/readmeimg/erm.png)
+![ERM](/static/readmeimg/erm.png)</details>
 
-</details>
-
-There are five categories of goods and services of which only goods may be purchased online. The Spaces and Services are purchases by emailing or by tenant customers only availabe on site.
+There are five categories of products and services of which only specific products may be purchased online. The Spaces and Services are purchases by emailing FMCI or by tenant customers and are only available on site.
 
 ## General Color Scheme
 
 I based the color scheme on the main [FMCI](https://futuremobilityireland.ie/) webpage. Font colours were chosen to make the best use of contrast in order to assist with visbility and clarity.
 
-<details>
-<summary>Color Scheme</summary>
+<details><summary>Color Scheme</summary>
 
-![Color Scheme](/static/readmeimg/colors.png)
-
-</details>
+![Color Scheme](/static/readmeimg/colors.png)</details>
 
 ## Logo
 
-The logo is FMCI's tradin logo which is based on a wireless communications icon in the colours of the Irish flag.
+The logo is FMCI's trading logo which is based on a wireless communications icon in the colours of the Irish flag.
 
 ## Home
 
 I used a similiar layout to the "Boutique Ado" tutorial with a the previously mentioned alteration to the color pallet.
 
-<details>
+<details><summary>Homepage Mockup</summary>
 
-<summary>Homepage Mockup</summary>
+![Homepage Mockup](/static/readmeimg/home.png)</details>
 
-![Homepage Mockup](/static/readmeimg/home.png)
+## Store
 
-</details>
+Again the store is based on the same Django framework as used in the Boutique Ado tutorial.
 
-<details>
+<details><summary>Store Page Mockup</summary>
 
-<summary>Store Page Mockup</summary>
+![Store Page Mockup](/static/readmeimg/store.png)</details>
 
-![Store Page Mockup](/static/readmeimg/store.png)
+## Other Offerings
 
-</details>
+This uses a clean look with a relevant photograph and a table listing the various options on offer.
 
+<details><summary>Offerings Mockup</summary>
+
+![Offerings Mockup](/static/readmeimg/other.png)</details>
 
 ---
+---
+&nbsp;
 
 # User Experience & Testing
 
@@ -142,94 +156,94 @@ Each user story has its own Agile task. In this way the implementation and the t
 
 <details><summary>As a visitor I can select wearable products in different sizes</summary>
 
-![Accessory](/static/readmeimg/visitor/visitor-sizes.png)
+![Sizes](/static/readmeimg/visitor/visitor-sizes.png)
 </details>
 
 <details><summary>As a visitor I can modify my cart and add or remove products</summary>
 
-![Accessory](/static/readmeimg/visitor/visitor-modify.png)
+![Modify](/static/readmeimg/visitor/visitor-modify.png)
 </details>
 
 <details><summary>As a visitor I can checkout and complete my product purchases</summary>
 
-![Accessory](/static/readmeimg/visitor/visitor-order.png)
+![Order](/static/readmeimg/visitor/visitor-order.png)
 </details>
 
 <details><summary>As a visitor I can see that my order is processing</summary>
 
-![Accessory](/static/readmeimg/visitor/visitor-stripe.png)
+![Stripe](/static/readmeimg/visitor/visitor-stripe.png)
 </details>
 
 <details><summary>As a visitor I can see that my order is successfull</summary>
 
-![Accessory](/static/readmeimg/visitor/visitor-success.png)
+![Success](/static/readmeimg/visitor/visitor-success.png)
 </details>
 
 <details><summary>As a visitor I receive an order confirmation email</summary>
 
-![Accessory](/static/readmeimg/visitor/visitor-order-email.png)
+![Order Email](/static/readmeimg/visitor/visitor-order-email.png)
 </details>
 
 <details><summary>As a visitor I can register so that I become a site user</summary>
 
-![Accessory](/static/readmeimg/visitor/visitor-register.png)
+![Register](/static/readmeimg/visitor/visitor-register.png)
 </details>
 
 <details><summary>As a visitor I will receive a registration verification link in an email</summary>
 
-![Accessory](/static/readmeimg/visitor/visitor-reg-confirm-email.png)
+![Registration Email](/static/readmeimg/visitor/visitor-reg-confirm-email.png)
 </details>
 
 <details><summary>As a visitor I can click a registration verification link from an email</summary>
 
-![Accessory](/static/readmeimg/visitor/user-reg-confirm.png)
+![Registration Confirm](/static/readmeimg/visitor/user-reg-confirm.png)
 </details>
 
 <details><summary>As a visitor I can get a registration acknowledgement alert</summary>
 
-![Accessory](/static/readmeimg/visitor/visitor-reg-ack.png)
+![Validation Acknowledgement](/static/readmeimg/visitor/visitor-reg-ack.png)
 </details>
 
 ### User Journey
 
 <details><summary>As a user I can log in to my account</summary>
 
-![Accessory](/static/readmeimg/user/user-login.png)
+![Login](/static/readmeimg/user/user-login.png)
 </details>
 
 <details><summary>As a user I can see my name when logged in</summary>
 
-![Accessory](/static/readmeimg/user/user-visible.png)
+![Visibility](/static/readmeimg/user/user-visible.png)
 </details>
 
 <details><summary>As a user I can view my user profile</summary>
 
-![Accessory](/static/readmeimg/user/user-profile.png)
+![Profile](/static/readmeimg/user/user-profile.png)
 </details>
 
 <details><summary>As a user I can modify my profile</summary>
 
-![Accessory](/static/readmeimg/user/user-profile-update.png)
+![Update](/static/readmeimg/user/user-profile-update.png)
 </details>
 
 <details><summary>As a user I can view details of my orders</summary>
 
-![Accessory](/static/readmeimg/user/user-orders.png)
+![Orders](/static/readmeimg/user/user-orders.png)
 </details>
 
 <details><summary>As a user I can view my past orders</summary>
 
-![Accessory](/static/readmeimg/user/past-orders.png)
+![Single](/static/readmeimg/user/past-orders.png)
 </details>
 
 <details><summary>As a user I can log out of my account</summary>
 
-![Accessory](/static/readmeimg/user/user-logout.png)
+![Logout](/static/readmeimg/user/user-logout.png)
 </details>
 
 <details><summary>As a user I can verify I've logged out of my account</summary>
 
-![Accessory](/static/readmeimg/user/user-logout-success.png)
+![Logout Confirmation](/static/readmeimg/user/user-logout-success.png)
 </details>
 
 
@@ -238,86 +252,34 @@ Each user story has its own Agile task. In this way the implementation and the t
 
 <details><summary>As a staff member I can manage store products</summary>
 
-![Accessory](/static/readmeimg/staff/staff-store.png)
+![Manage Store](/static/readmeimg/staff/staff-store.png)
 </details>
 
 <details><summary>As a staff member I can edit store products</summary>
 
-![Accessory](/static/readmeimg/staff/staff-edit.png)
+![Edit Product](/static/readmeimg/staff/staff-edit.png)
 </details>
 
 <details><summary>As a staff member I can delete store products with confirmation warning</summary>
 
-![Accessory](/static/readmeimg/staff/staff-delete.png)
+![Delete Product](/static/readmeimg/staff/staff-delete.png)
 </details>
 
 
 <details><summary>As a staff member I can add a new product</summary>
 
-![Accessory](/static/readmeimg/staff/staff-add.png)
+![Add Product](/static/readmeimg/staff/staff-add.png)
 </details>
 
 <details><summary>As a staff member I can view confirm product is added</summary>
 
-![Accessory](/static/readmeimg/staff/staff-new-product.png)
+![See New Product](/static/readmeimg/staff/staff-new-product.png)
 </details>
 
-### Authentication
-
-<details>
-<summary>Login Modal</summary>
-
-![Home](media/mob/login-mob.png)
-
-</details>
-
-<details>
-<summary>Logout Modal</summary>
-
-![Home](media/mob/logout-mob.png)
-
-</details>
-
-<details>
-<summary>Register Modal</summary>
-
-![Home](media/mob/reg-mob.png)
-
-</details>
-
-&nbsp;
-
-## Map Interaction
-
-The map, with its markers indicating the locations of the wells, is really the main event in this application. The map itself uses [mapbox gl](https://www.mapbox.com/) and there are explanatory [notes](#notes) at the end of this document detailing how it(mapbbox), python and javascript all hangs together. The marker popup works in the same way on all devices and consists of three elements, Popup Title, Excerpt and a Google Maps Link to the loction.
-<details>
-<summary>Popup Title</summary>
-
-![Home](media/lap/popup-lnk1.png)
-
-</details>
-
-The popup title becomes an active link when there is a related content record in the database. Otherwise it is a plain heading when there is not. You can see the link to the post content appear in the bottom right of the screen in the Popup Title screenshot.
-
-<details>
-<summary>Google Map Link</summary>
-
-![Home](media/lap/popup-lnk2.png)
-
-</details>
-
-By clicking on the <span style="color: rgb(168, 109, 0);">*'open location in google maps'*</span> button, a new google maps page opens with the location set as a destination allowing the user to click on the *'Directions'* link to navigate to the lcoation.
-
-<details>
-<summary>Google Map Window</summary>
-
-![Home](media/lap/gmap.png)
-
-</details>
-
-&nbsp;
 
 ---
+---
+&nbsp;
 
 # Technologies
 
@@ -330,14 +292,15 @@ By clicking on the <span style="color: rgb(168, 109, 0);">*'open location in goo
   - [Crispy Bootstrap5](https://pypi.org/project/crispy-bootstrap5/): bootstrap5 template pack for crispy forms.
   - [Django Forms Dynamic](https://github.com/dabapps/django-forms-dynamic): for the dynamic form using HTMX.
   - [Django Widget Tweaks](https://pypi.org/project/django-widget-tweaks/): for the dynamic form.
-  - [Coverage](https://github.com/nedbat/coveragepy/tree/6.5.0): for measuring code coverage of Python tests.
-
 - [Bootstrap](https://getbootstrap.com/): styling.
-- [Cloudinary](https://cloudinary.com/): store static and media files.
-- [GIT](https://git-scm.com/): for version control.
+- [Outlook](https://outlook.com/): for email testing.
+- [Stripe](https://stripe.com/): for payments and webhooks.
+- [Facebook](https://facebook.com/): For SEO.
+- [AWS S3](https://aws.amazon.com/pm/serv-s3): store media files.
 - [GitHub](https://github.com/): for host repository.
 - Lighthouse from Chrome Developer Tools for performance testing
 - [Codeanywhere](https://codeanywhere.com/): online IDE.
+- [GitPod](https://www.gitpod.io/): online IDE.
 - [Heroku](:<https://codeanywhere.com/):> PaaS deployment site
 - [Google Fonts](https://fonts.google.com/): to import fonts.
 - [Font Awesome](https://fontawesome.com/): to import icons.
