@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import PartnerImages
 
+
 # Register your models here.
 class PartnerImagesAdmin(admin.ModelAdmin):
     list_display = (

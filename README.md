@@ -307,6 +307,11 @@ Email is used to verify user registration and to confirm purchases for visitiors
 
 ---
 
+## Code Testing
+
+I used CI's linter (https://pep8ci.herokuapp.com/) to test all the python. In some cases there are "line too long" warnings but lines cannot alawys be split up easily.
+- Example: content=f'Webhook received: event["type"]} | SUCCESS: Verified order already in database',
+
 ## Lighthouse Testing
 
 Each of the main pages are tested for performance using Google's Lighthouse in the Developer Tools.

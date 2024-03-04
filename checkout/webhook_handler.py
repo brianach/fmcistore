@@ -11,6 +11,7 @@ import stripe
 import json
 import time
 
+
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
 
@@ -27,7 +28,7 @@ class StripeWH_Handler:
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
         try:
             send_mail(
                 subject,
@@ -60,9 +61,9 @@ class StripeWH_Handler:
             intent.latest_charge
         )
 
-        billing_details = stripe_charge.billing_details # updated
+        billing_details = stripe_charge.billing_details  # updated
         shipping_details = intent.shipping
-        grand_total = round(stripe_charge.amount / 100, 2) # updated
+        grand_total = round(stripe_charge.amount / 100, 2)  # updated
 
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
@@ -109,7 +110,7 @@ class StripeWH_Handler:
             except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
-        
+
         if order_exists:
 
             self._send_confirmation_email(order)
@@ -136,12 +137,12 @@ class StripeWH_Handler:
                 )
                 for item_id, item_data in json.loads(cart).items():
                     StoreItem = StoreItem.objects.get(id=item_id)
-                    print("StoreItem value is: ",StoreItem)
+                    print("StoreItem value is: ", StoreItem)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
                             StoreItem=StoreItem,
-                                                        quantity=item_data,
+                            quantity=item_data,
                         )
                         order_line_item.save()
                     else:

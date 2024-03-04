@@ -1,7 +1,7 @@
 from django.db import models
 
-# Create your models here.
 
+# Create your models here.
 class PartnerImages(models.Model):
 
     p_name = models.CharField(max_length=254)

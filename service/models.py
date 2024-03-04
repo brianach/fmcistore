@@ -43,6 +43,7 @@ class Compute(BaseService):
     class Meta:
         verbose_name_plural = 'Compute'
 
+
 class Digital(BaseService):
     pass
 

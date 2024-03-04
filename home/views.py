@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from .models import PartnerImages
 
+
 # Create your views here.
-
-
 def index(request):
     """ A view to return the index page """
 
