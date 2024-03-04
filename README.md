@@ -249,7 +249,6 @@ Each user story has its own Agile task. In this way the implementation and the t
 
 ### Staff Journey
 
-
 <details><summary>As a staff member I can manage store products</summary>
 
 ![Manage Store](/static/readmeimg/staff/staff-store.png)
@@ -276,10 +275,47 @@ Each user story has its own Agile task. In this way the implementation and the t
 ![See New Product](/static/readmeimg/staff/staff-new-product.png)
 </details>
 
+---
+
+## Stripe Payments Webhooks
+
+Stripe is being used to complete purchases. In order to verify that payments are processed correctly Stripe's webhooks are utilised.
+
+<details><summary>Sample Webhooks List</summary>
+
+![Sample Webhooks List](/static/readmeimg/stripe-list.png)</details>
+
+---
+
+## Email Verification
+
+Email is used to verify user registration and to confirm purchases for visitiors and users. 
+
+### Registration Verification Email
+
+<details><summary>Email Verification</summary>
+
+![Email Verification](/static/readmeimg/visitor/visitor-reg-confirm-email.png)</details>
+
+### Order Confirmation Email
+
+<details><summary>Order Confirmation</summary>
+
+![Order Confirmation](/static/readmeimg/visitor/visitor-order-email.png)</details>
+
+---
+
+## Lighthouse Testing
+
+Each of the main pages are tested for performance using Google's Lighthouse in the Developer Tools.
+
+### Home Page
 
 ---
 ---
 &nbsp;
+
+
 
 # Technologies
 
@@ -301,7 +337,7 @@ Each user story has its own Agile task. In this way the implementation and the t
 - Lighthouse from Chrome Developer Tools for performance testing
 - [Codeanywhere](https://codeanywhere.com/): online IDE.
 - [GitPod](https://www.gitpod.io/): online IDE.
-- [Heroku](:<https://codeanywhere.com/):> PaaS deployment site
+- [Heroku](https://codeanywhere.com/): PaaS deployment site
 - [Google Fonts](https://fonts.google.com/): to import fonts.
 - [Font Awesome](https://fontawesome.com/): to import icons.
 - [Lucidchart](https://www.drawio.com/): for the mockups and ERM.
