@@ -314,7 +314,7 @@ I used CI's linter (https://pep8ci.herokuapp.com/) to test all the python. In so
 
 ## Lighthouse Testing
 
-Each of the main pages are tested for performance using Google's Lighthouse in the Developer Tools.
+Full testing has not been complted due to time constraints. 
 
 ### Home Page
 
@@ -357,16 +357,6 @@ Each of the main pages are tested for performance using Google's Lighthouse in t
 # Deployment
 
 ## Deploy site using Heroku
-
-Deployment pre-requisites:
-
-- ### gunicorn
-
-- ### dj_database_url
-
-- ### dj3-cloudinary-storage
-
-- ### psycopag2
   
 ## Deployment Procedure
 
@@ -383,28 +373,13 @@ Deployment pre-requisites:
   - Add a new config var for SECRET_KEY - create your own or use a django secret key generator
   - Add a new config var for CLOUDINARY_URL and use the "API Environment variable" from your cloudinary dashboard
   - Add a new config var for DISABLE_COLLECTSTATIC with the value of 1 (!!! REMOVE PRIOR TO FINAL DEPLOYMENT !!!)
+  - Add AWS config variables if used
+  - Add Stripe Payments variabls if used
   
 - ### Create environment variables for your app
-  
-  Create a new env.py file in the top level directory with the following lines
 
-    ```python
-    import os  
-    os.environ["DATABASE_URL"] = "the database url you set in Heroku"  
-    os.environ["SECRET_KEY"] = "your chosen secret key"  
-    os.environ["CLOUDINARY_URL"] = "the api you used in Heroku  
-    ```
 
   - If not already present, create a .gitignore file and add env.py to it ( before final deployment add any other files and folders you want to exclude from the deployed app)
-
-- ### Add the following lines to settings.py in your app
-
-    ```python
-    import os
-    import dj_database_url
-    if os.path.isfile('env.py'):
-    import env
-    ```
 
 - ### Replace the insecure secret key with "SECRET_KEY = os.environ.get('SECRET_KEY')"
 
@@ -420,25 +395,6 @@ Deployment pre-requisites:
 
   ```python
   ALLOWED_HOSTS = ['example-heroku-app-name.herokuapp.com', 'localhost']
-  ```
-
-- ### Add 'cloudinary_storage' (above 'django.contrib.staticfiles') and 'cloudinary' (below) to INSTALLED_APPS
-
-  ```python
-  'cloudinary_storage',
-  'django.contrib.staticfiles',
-  'cloudinary',
-  ```
-
-- ### Setup Cloudinary to store static and media files
-
-  ```python
-    STATIC_URL = '/static/'
-	STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-	STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-	STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-	MEDIA_URL = '/media/'
-	DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
   ```
 
 - ### Create a Procfile in the top level directory with the below
@@ -493,10 +449,7 @@ Deployment pre-requisites:
 
 ## Code
 
-- The site is based on a modified version of [Code Institute's PP4](https://github.com/Code-Institute-Solutions/Django3blog)
-- The code for the Map Page is supplied by [MapBox](https://www.mapbox.com/) and is freely availabe for customizing for your own projects. I've documented how I adapted it to this site [here](#notes)
-- The code for user comments was adapted from [Code Institute's PP4 Masterclass](https://www.youtube.com/watch?v=YH--VobIA8c)
-- The code for authentication was adapted from [Code Institute's PP4 Masterclass](https://www.youtube.com/watch?v=YH--VobIA8c) which I modified to use modals instead of full web pages
+- The site is based on a modified version of [Code Institute's PP5](https://github.com/Code-Institute-Solutions/Boutique-Ado)
 - Deployment procedure modified from [SJeCollins](https://github.com/SJECollins/ci-pp4-pet-rx/blob/main/README.md) excellent readme and also his test procedure document
 
 &nbsp;
@@ -505,18 +458,11 @@ Deployment pre-requisites:
 
 ## Media
 
-- The logo was created in Gimp
+- The logo is FMCI's current logo
 - Social media and google map location icons are from [Font Awesome](https://fontawesome.com)
-- Roboto and Lato fonts are from [Google Fonts](https://fonts.google.com)
-- [Lambbdatest](https://www.lambdatest.com/) was used todo initial layout tests and device screenshots to import into Gimp
-
-- Background and placeholder images are from [pxfuel](https://www.pxfuel.com/) and [wallpapersafari](https://wallpapersafari.com/)
+- Fonts are from [Google Fonts](https://fonts.google.com)
+- Product images are stock images with FMCI logo appeded using GIMP [GIMP](https://www.gimp.org/)
   
-- Well Images from [County Clare Heritage Office](https://heritage.clareheritage.org/category/places/holy-wells) and [Galway Heritage Office](https://heritage.galwaycommunityheritage.org/):
-  - Tobar Éanna taken by Paddy Crowe
-  - Tobar Mochulla taken by James Feeney
-  - Tobar Bhríde taken by James Feeney
-  - Toba na nAingeal taken by Tony Kirby
 
 &nbsp;
 
