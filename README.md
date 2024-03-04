@@ -38,6 +38,8 @@
     - [Visitor Journey](#visitor-journey)
     - [User Journey](#user-journey)
     - [Staff Journey](#staff-journey)
+  - [Stripe Payments](#stripe-payments-webhooks)
+  - [Email Verification](#email-verification)
 
 - [Technologies](#technologies)
 - [Deployment](#deployment)
