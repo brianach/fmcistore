@@ -117,6 +117,10 @@ body {
     justify-content: flex-end;
 }
 
+.pad-link {
+    padding: 5%;
+}
+
 .btn-black {
     background: black;
     color: white;
