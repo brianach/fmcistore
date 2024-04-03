@@ -279,9 +279,9 @@ Each user story has its own Agile task. In this way the implementation and the t
 
 ---
 
-## Stripe Payments Webhooks
+## Stripe Payments Webhooks https://github.com/brianach/fmcistore/issues/43
 
-Stripe is being used to complete purchases. In order to verify that payments are processed correctly Stripe's webhooks are utilised.
+Stripe is being used to complete purchases. In order to verify that payments are processed correctly Stripe's webhooks are utilised. 
 
 <details><summary>Sample Webhooks List</summary>
 
