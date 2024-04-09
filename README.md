@@ -136,36 +136,48 @@ This uses a clean look with a relevant photograph and a table listing the variou
 
 ## User Stories
 
-Each user story has its own Agile task. In this way the implementation and the testing is integrated as one. A task may have dependencies which must be in place in order for the current task to be completed. An example of this is shown here.
+There are three levels of user stories: visitor, user and staff. The stories are linked to agile tasks which can be seen below. Agile tasks cover one or more stpes on each of the user stories and journeys. Below we can see the agile tasks followed by the journey steps included in that task. The task view itself shows the code commits that were made to implement the task and a list of the steps completed. Below is an edited example of [Agile Task 42 - Add Checkout App](https://github.com/brianach/fmcistore/issues/42)
+
+<details><summary>Edited Example</summary> 
+
+![Example](/static/readmeimg/task-steps.png)
+</details>
 
 ### Visitor Journey
-  
+
+[Agile Task 39 - Add Store App](https://github.com/brianach/fmcistore/issues/39)  
 <details><summary>As a visitor I can use a menu to view products and services</summary>
 
 ![Menu](/static/readmeimg/visitor/visitor-menu.png)
 </details>
 
+<details><summary>As a visitor I access the store so I can purchase products </summary>
 
-<details><summary>As a visitor I access the store so I can purchase products</summary>
-
+ 
 ![Store](/static/readmeimg/visitor/visitor-store.png)
 </details>
+
 
 <details><summary>As a visitor I can select wearable products and accessories</summary>
 
 ![Accessory](/static/readmeimg/visitor/visitor-accessory.png)
 </details>
 
+ 
 <details><summary>As a visitor I can select wearable products in different sizes</summary>
 
 ![Sizes](/static/readmeimg/visitor/visitor-sizes.png)
 </details>
+&nbsp;
 
+[Agile Task 34 - Add Cart App](https://github.com/brianach/fmcistore/issues/34)
 <details><summary>As a visitor I can modify my cart and add or remove products</summary>
 
 ![Modify](/static/readmeimg/visitor/visitor-modify.png)
 </details>
+&nbsp;
 
+[Agile Task 42 - Add Checkout App](https://github.com/brianach/fmcistore/issues/42)
 <details><summary>As a visitor I can checkout and complete my product purchases</summary>
 
 ![Order](/static/readmeimg/visitor/visitor-order.png)
@@ -180,12 +192,16 @@ Each user story has its own Agile task. In this way the implementation and the t
 
 ![Success](/static/readmeimg/visitor/visitor-success.png)
 </details>
+&nbsp;
 
+[Agile Task 51 - Add Email Functionality](https://github.com/brianach/fmcistore/issues/51)
 <details><summary>As a visitor I receive an order confirmation email</summary>
 
 ![Order Email](/static/readmeimg/visitor/visitor-order-email.png)
 </details>
+&nbsp;
 
+[Agile Task 48 - Add Profiles App](https://github.com/brianach/fmcistore/issues/48)
 <details><summary>As a visitor I can register so that I become a site user</summary>
 
 ![Register](/static/readmeimg/visitor/visitor-register.png)
@@ -200,7 +216,9 @@ Each user story has its own Agile task. In this way the implementation and the t
 
 ![Registration Confirm](/static/readmeimg/visitor/user-reg-confirm.png)
 </details>
+&nbsp;
 
+[Agile Task 50 - Add Toasts](https://github.com/brianach/fmcistore/issues/50)
 <details><summary>As a visitor I can get a registration acknowledgement alert</summary>
 
 ![Validation Acknowledgement](/static/readmeimg/visitor/visitor-reg-ack.png)
@@ -208,14 +226,10 @@ Each user story has its own Agile task. In this way the implementation and the t
 
 ### User Journey
 
+[Agile Task 48 - Add Profiles App](https://github.com/brianach/fmcistore/issues/48)
 <details><summary>As a user I can log in to my account</summary>
 
 ![Login](/static/readmeimg/user/user-login.png)
-</details>
-
-<details><summary>As a user I can see my name when logged in</summary>
-
-![Visibility](/static/readmeimg/user/user-visible.png)
 </details>
 
 <details><summary>As a user I can view my user profile</summary>
@@ -242,7 +256,16 @@ Each user story has its own Agile task. In this way the implementation and the t
 
 ![Logout](/static/readmeimg/user/user-logout.png)
 </details>
+&nbsp;
 
+[Agile Task 56 - Show Full Name on navbar when logged in](https://github.com/brianach/fmcistore/issues/56)
+<details><summary>As a user I can see my name when logged in</summary>
+
+![Visibility](/static/readmeimg/user/user-visible.png)
+</details>
+&nbsp;
+
+[Agile Task 50 - Add Toasts](https://github.com/brianach/fmcistore/issues/50)
 <details><summary>As a user I can verify I've logged out of my account</summary>
 
 ![Logout Confirmation](/static/readmeimg/user/user-logout-success.png)
@@ -250,6 +273,8 @@ Each user story has its own Agile task. In this way the implementation and the t
 
 
 ### Staff Journey
+
+[Agile Task 49 -Implement Store Management](https://github.com/brianach/fmcistore/issues/49)
 
 <details><summary>As a staff member I can manage store products</summary>
 
@@ -279,9 +304,9 @@ Each user story has its own Agile task. In this way the implementation and the t
 
 ---
 
-## Stripe Payments Webhooks https://github.com/brianach/fmcistore/issues/43
+## Stripe Payments Webhooks
 
-Stripe is being used to complete purchases. In order to verify that payments are processed correctly Stripe's webhooks are utilised. 
+Stripe is being used to complete purchases. In order to verify that payments are processed correctly Stripe's webhooks are utilised.
 
 <details><summary>Sample Webhooks List</summary>
 
