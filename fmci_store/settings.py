@@ -13,6 +13,8 @@ import os
 import dj_database_url
 from pathlib import Path
 
+DEBUG = True
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
