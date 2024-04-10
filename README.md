@@ -50,8 +50,6 @@
   - [Code](#code)
   - [Media](#media)
   - [Acknowledgement](#acknowledgement)
-- [Notes](#notes)
-  - [Map Popup Dialog](#map-popup-dialog)
 
 ---
 ---
