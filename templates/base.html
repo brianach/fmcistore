@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9988CFHBCY"></script>
     <script>
@@ -76,10 +77,10 @@
     <header class="container-fluid">
       <div id="topnav" class="row pt-lg-2 d-lg-flex">
         <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center">
-          <button class="bg-transparent border-0">
+          <button class="bg-transparent border-0" title="fmci-logo">
             <a href="{% url 'home' %}" class="nav-link main-logo-link"
               ><img src="https://fmci-store.s3.eu-west-1.amazonaws.com/media/fmci-logo.svg"
-            /></a>
+            alt="fmci-logo"/></a>
           </button>
         </div>
         <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
@@ -94,7 +95,7 @@
               <div class="input-group-append">
                 <button
                   class="form-control text-white btn bg-transparent border fmci-search-border rounded-0"
-                  type="submit"
+                  type="submit" title="search-glass"
                 >
                   <span class="icon">
                     <i class="fas fa-search"></i>
@@ -217,7 +218,7 @@
         <div class="container pad-link">
             <div class="row text-middle">
                 <a class="text-white" href="https://www.facebook.com/profile.php?id=61557020310153" target="_blank"><i class="fab fa-facebook-square text-white"></i> Follow us on Facebook!</a>
-                <a class="text-white" href="{% url 'signup' %}" target="_blank"><i class="fas fa-paper-plane text-white"></i> Newsletter Signup</a>
+                <a class="text-white" href="{% url 'signup' %}"><i class="fas fa-paper-plane text-white"></i> Newsletter Signup</a>
             </div>
         </div>
     </div>

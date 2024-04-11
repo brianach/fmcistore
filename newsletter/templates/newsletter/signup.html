@@ -11,21 +11,23 @@
 
 {% block content %}
 
-<div class="container">
-  <div class="row">
-    <div class="col">
+<div class="container info-text">
+  <div class="row text-white">
       <hr>
       <h2 class="logo-font mb-4">Newsletter Signup</h2>
       <hr>
-    </div>
   </div>
-  <div class="row">
+
+  <div class="container">
     <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Subscribe</button>
-    </form>
+    <div class="row text-middle align-items-center">
+        <a class="text-white" >{{ form.as_p }}{% csrf_token %}</a>
+        <a class="text-white" ><button type="submit">Subscribe</button></a>
+    </div>
+    </form>   
   </div>
-  </div>
+
+</div>
+
 
 {% endblock %}
