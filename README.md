@@ -34,6 +34,7 @@
   - [Other](#other-offerings-1)
 
 - [User Experience & Testing](#user-experience--testing)
+  - [Agile Tracker](#agile)
   - [User Stories](#user-stories)
     - [Visitor Journey](#visitor-journey)
     - [User Journey](#user-journey)
@@ -42,10 +43,12 @@
   - [Email Verification](#email-verification)
 
 - [Technologies](#technologies)
+
 - [Deployment](#deployment)
   - [Deploy site using Heroku](#deploy-site-using-heroku)
   - [Deployment Procedure](#deployment-procedure)
   - [Steps to clone site](#steps-to-clone-site)
+
 - [Credits](#credits)
   - [Code](#code)
   - [Media](#media)
@@ -131,6 +134,10 @@ This uses a clean look with a relevant photograph and a table listing the variou
 &nbsp;
 
 # User Experience & Testing
+
+## Agile
+
+I used GitPod Project to as my [Agile](https://github.com/users/brianach/projects/8) tracker
 
 ## User Stories
 
@@ -372,6 +379,7 @@ Full testing has not been complted due to time constraints.
 - [Font Awesome](https://fontawesome.com/): to import icons.
 - [Lucidchart](https://www.drawio.com/): for the mockups and ERM.
 - [GIMP](https://www.gimp.org/): to create the logo and readme screens image
+- [Issues](https://github.com/brianach/fmcistore/issues): agile project management 
 
 &nbsp;
 
