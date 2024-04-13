@@ -56,6 +56,16 @@ body {
     width: 13px; /* it would be cool to use js but that would increase the code footprint */
 }
 
+.fmci-button {
+    font-size: larger;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: #457893;
+    background: transparent;
+    color: white;
+}
 
 .logo-font {
     text-transform: uppercase;
@@ -82,17 +92,6 @@ body {
 .no-padding .col {
     padding-left: 0;
     padding-right: 0;
-}
-
-.fmci-button {
-    font-size: larger;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-color: #457893;
-    background: transparent;
-    color: white;
 }
 
 .text-middle {
@@ -229,6 +228,11 @@ body {
     border-color: #457893;
 }
 
+/* reduce cart button size to support smaller screens */
+.btn-sm {
+    padding: .25rem .25rem;
+}
+
 .btt-button {
     height: 42px;
     width: 42px;
@@ -345,6 +349,17 @@ input[name='q']::placeholder {
 
 /* Media Queries */
 
+/* No background image on monile devices */
+@media only screen {
+    body {
+        background: none;
+        background-color: #1d3d5a;
+    }
+    /* reduce shopping cart title size */
+    .table-title {
+        font-size: 1rem;
+    }
+}
 /* On screens that are 1200px or less, set the background color to blue */
 @media screen and (max-width: 1200px) {
     .desk-table {

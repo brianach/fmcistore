@@ -3,26 +3,17 @@
 <html lang="en">
   <head>
 
+    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
+
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9988CFHBCY"></script>
-    <script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9988CFHBCY" defer></script>
+    <script defer>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-9988CFHBCY');
     </script>
-    <!-- Google Analytics -->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    
-    ga('create', 'UA-XXXXX-Y', 'auto');
-    ga('send', 'pageview');
-    </script>
-    <!-- End Google Analytics -->
+
     <meta name="google-site-verification" content="L33apRDqRtPi1I8nHWeQhXlwDacsbGytSjistzBgvfE" />
     {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -62,11 +53,10 @@
       integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
       crossorigin="anonymous"
     ></script>
-    <script src="https://js.stripe.com/v3/"></script>
     {% endblock %} {% block extra_js %}
     <script
       src="https://kit.fontawesome.com/559cadc1ae.js"
-      crossorigin="anonymous"
+      crossorigin="anonymous" defer
     ></script>
     {% endblock %}
 

@@ -214,6 +214,7 @@
 {% endblock %}
 <!-- prettier ignore -->
 {% block postloadjs %} {{ block.super }}
+<script src="https://js.stripe.com/v3/"></script>
 <!-- prettier ignore -->
 {{ stripe_public_key|json_script:"id_stripe_public_key" }}
 <!-- prettier ignore -->
