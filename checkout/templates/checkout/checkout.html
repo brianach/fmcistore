@@ -33,7 +33,7 @@
       {% for item in cart_items %}
       <div class="row">
         <div class="col-2 mb-1">
-          <a href="{% url 'storeitem_detail' item.storeitem.id %}">
+          <a href="{% url 'storeitem_detail' item.storeitem.id %}" aria-label="{{ item.storeitem }}">
             {% if item.storeitem.image_one %}
             <img
               class="w-100"

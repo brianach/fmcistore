@@ -52,7 +52,7 @@
             {% for image in partner_images %}
             <div class="carousel-item {% if forloop.first %}active{% endif %}">
                 <a href="{{ image.p_link }}" target="_blank">
-                    <img src="{{ image.p_image.url }}" class="d-block" alt="{{ image.p_name }}">
+                    <img loading="lazy" src="{{ image.p_image.url }}" class="d-block" alt="{{ image.p_name }}">
                 </a>
             </div>
             {% endfor %}

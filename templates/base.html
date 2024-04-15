@@ -4,7 +4,7 @@
   <head>
 
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
-
+    <link rel="preconnect" href="https://region1.google-analytics.com">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9988CFHBCY" defer></script>
     <script defer>
@@ -32,10 +32,10 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
-    <link
+    <!--<link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
-    />
+    />-->
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% endblock %} {% block extra_css %} {% endblock %} {% block corejs %}
     <script
@@ -167,7 +167,7 @@
         <div class="col event-banner text-black notice-back">
           <h4 class="logo-font my-1">
             <!-- prettier-ignore -->
-            {% block banner_text %}Don't forget to join us @ Future Mobility 2024 !
+            {% block banner_text %}Join us @ Future Mobility 2024 !
             {% endblock %}
           </h4>
         </div>
