@@ -34,9 +34,9 @@
   - [Other](#other-offerings-1)
 
 - [SEO & Marketing](#seo--marketing)
-  -[SEO](#seo)
-  -[Marketing](#marketing)
-  -[Newsletter](#newsletter)
+  - [SEO](#seo)
+  - [Marketing](#marketing)
+  - [Newsletter](#newsletter)
 
 - [User Experience & Testing](#user-experience--testing)
   - [Agile Tracker](#agile)
@@ -181,19 +181,19 @@ content="width=device-width, initial-scale=1, shrink-to-fit=no"
 
 ### Online Platforms
 
-    LinkedIn would be the main vehicle for social media in order to target and engage the relevant audience and market. Instagram and Facebook would alo be utilised and a facebook page is provided cuurrently.
+LinkedIn would be the main vehicle for social media in order to target and engage the relevant audience and market. Instagram and Facebook would alo be utilised and a facebook page is provided cuurrently.
 
 ### Target Market
 
-    The target market is OEMs, new startups and automotive research organisations. 
+The target market is OEMs, new startups and automotive research organisations. 
 
 ### Goals of the business
 
-    As a platform for automotive research the goal is to provide merchandise online and at events to draw attention to FMCI and to increase awareness in the industry and in general.
+As a platform for automotive research the goal is to provide merchandise online and at events to draw attention to FMCI and to increase awareness in the industry and in general.
 
 ### Similiar Businesses
 
-    In terms of FMCI's business offering there aren't many if any competing businesses. FMCI provides a bespoke automotive testing platform as a service to the automotive industry, OEMs and new startups. Some specific aspects of FMCIs services are provided by AWS, Google, Heroku, Connected Hubs, WeWork etc.
+In terms of FMCI's business offering there aren't many if any competing businesses. FMCI provides a bespoke automotive testing platform as a service to the automotive industry, OEMs and new startups. Some specific aspects of FMCIs services are provided by AWS, Google, Heroku, Connected Hubs, WeWork etc.
 
 
 ## Newsletter
