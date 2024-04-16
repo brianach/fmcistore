@@ -33,6 +33,11 @@
   - [Store](#store-1)
   - [Other](#other-offerings-1)
 
+- [SEO & Marketing](#seo--marketing)
+  -[SEO](#seo)
+  -[Marketing](#marketing)
+  -[Newsletter](#newsletter)
+
 - [User Experience & Testing](#user-experience--testing)
   - [Agile Tracker](#agile)
   - [User Stories](#user-stories)
@@ -41,6 +46,7 @@
     - [Staff Journey](#staff-journey)
   - [Stripe Payments](#stripe-payments-webhooks)
   - [Email Verification](#email-verification)
+  - [Lighthouse Testing](#lighthouse-testing)
 
 - [Technologies](#technologies)
 
@@ -133,11 +139,81 @@ This uses a clean look with a relevant photograph and a table listing the variou
 ---
 &nbsp;
 
+# SEO & Marketing
+
+## SEO
+
+For the purposes of PP5 a facebook page is provided here [FMCI Store](https://www.facebook.com/people/FMCI-Store/61557020310153/)
+
+<details><summary>Facebook Page Screenshot</summary>
+
+![Facebook](/static/readmeimg/fbook.png)
+
+</details>
+
+### Relevant code from webpage
+
+```html
+<link rel="preconnect" href="https://region1.google-analytics.com">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9988CFHBCY" defer></script>
+<script defer>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-9988CFHBCY');
+</script>
+
+<meta name="google-site-verification" content="L33apRDqRtPi1I8nHWeQhXlwDacsbGytSjistzBgvfE" />
+{% block meta %}
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<meta charset="utf-8" />
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/>
+<meta name="robots" content="index, nofollow">
+<meta name="keywords" content="FMCI, fmci, future,  mobility, campus">
+<meta name="description" content="Storefront CI Project for FMCI">
+```
+
+## Marketing
+
+### Online Platforms
+
+    LinkedIn would be the main vehicle for social media in order to target and engage the relevant audience and market. Instagram and Facebook would alo be utilised and a facebook page is provided cuurrently.
+
+### Target Market
+
+    The target market is OEMs, new startups and automotive research organisations. 
+
+### Goals of the business
+
+    As a platform for automotive research the goal is to provide merchandise online and at events to draw attention to FMCI and to increase awareness in the industry and in general.
+
+### Similiar Businesses
+
+    In terms of FMCI's business offering there aren't many if any competing businesses. FMCI provides a bespoke automotive testing platform as a service to the automotive industry, OEMs and new startups. Some specific aspects of FMCIs services are provided by AWS, Google, Heroku, Connected Hubs, WeWork etc.
+
+
+## Newsletter
+
+Visitors and users can signup to a newsletter to receive news, developments and other relevant information.
+
+<details><summary>Newsletter Screenshot</summary> 
+
+![Newsletter Screenshot](/static/readmeimg/newsletter.png)
+</details>
+
+---
+---
+&nbsp;
+
 # User Experience & Testing
 
 ## Agile
 
-I used GitPod Project to as my [Agile](https://github.com/users/brianach/projects/8) tracker
+I used [GitPod Project](https://github.com/users/brianach/projects/8) to as my Agile tracker
 
 ## User Stories
 
@@ -271,6 +347,7 @@ There are three levels of user stories: visitor, user and staff. The stories are
 &nbsp;
 
 [Agile Task 50 - Add Toasts](https://github.com/brianach/fmcistore/issues/50)
+
 <details><summary>As a user I can verify I've logged out of my account</summary>
 
 ![Logout Confirmation](/static/readmeimg/user/user-logout-success.png)
@@ -344,9 +421,52 @@ I used CI's linter (https://pep8ci.herokuapp.com/) to test all the python. In so
 
 ## Lighthouse Testing
 
-Full testing has not been complted due to time constraints. 
+The main pages used were tested using Google Dev Tools Lightouse
 
-### Home Page
+### Desktop Platform Testing
+
+<details><summary>Home Page</summary>
+
+![Home](/static/readmeimg/performance/desktop-home-perf.png)</details>
+
+<details><summary>Store Page</summary>
+
+![Store](/static/readmeimg/performance/desktop-store-perf.png)</details>
+
+<details><summary>Product Page</summary>
+
+![Product](/static/readmeimg/performance/desktop-product-perf.png)</details>
+
+<details><summary>Cart</summary>
+
+![Cart](/static/readmeimg/performance/desktop-cart-perf.png)</details>
+
+<details><summary>Checkout</summary>
+
+![Checkout](/static/readmeimg/performance/desktop-till-perf.png)</details>
+
+### Mobile Platform Testing
+
+<details><summary>Home Page</summary>
+
+![Home](/static/readmeimg/performance/mobile-home-perf.png)</details>
+
+<details><summary>Store Page</summary>
+
+![Store](/static/readmeimg/performance/mobile-store-perf.png)</details>
+
+<details><summary>Product Page</summary>
+
+![Product](/static/readmeimg/performance/mobile-product-perf.png)</details>
+
+<details><summary>Cart</summary>
+
+![Cart](/static/readmeimg/performance/mobile-cart-perf.png)</details>
+
+<details><summary>Checkout</summary>
+
+![Checkout](/static/readmeimg/performance/mobile-till-perf.png)</details>
+
 
 ---
 ---
